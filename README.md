@@ -1,7 +1,7 @@
-# Portfolio-Update
+# tonythetiger323.github.io/]
 
 ## Link to Page:
-[Link to Portfolio Update](https://tonythetiger323.github.io/Portfolio-Update/)
+[Link to Portfolio](https://tonythetiger323.github.io/)
 
 ## About This Project:
 Portfolio-Update is a site I had to make for homework, as part of the Northwestern University Full Stack Coding Bootcamp, whose purpose was to update our portfolio page be presentable to employers for possible employment opportunities.
