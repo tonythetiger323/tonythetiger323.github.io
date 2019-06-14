@@ -210,14 +210,14 @@ var Mi = {
                 });
             }
             
-            function loadContent() {　
+            function loadContent() {
                $ajaxModal.load(toLoad);
-        　  }
+            }
             
             $('[data-target="ajax-modal"]').on('click', function() {
                 isAjaxModal = true;
                 offsetTop = $(document).scrollTop();
-                toLoad = $(this).attr('href');　
+                toLoad = $(this).attr('href');
                 loadContent();
                 $('body').addClass('ajax-modal-opened');
                 return false; 
@@ -354,21 +354,21 @@ var Mi = {
                 var response;
                 $formAlert.hide().html();
                 if ($contactForm.valid()){
-                    $.ajax({
-                        type: "POST",
-                        url: "assets/php/contact-form.php",
-                        data: $(this).serialize(),
-                        success: function(msg) {
-                            if (msg === 'SEND') {
-                                response = '<div class="alert alert-success">Done! Thank you for your message - You will get an answer as soon as possible.';
-                            }
-                            else {
-                                response = '<div class="alert alert-danger">Ooops... It seems that we have a problem.';
-                            }
-                            $formAlert.html(response);
-                            $formAlert.show();
-                        }
-                     });
+                    Email.send({
+                        SecureToken: "65f84a85-c2c2-452c-9893-65f23caf0892",
+                        To: "tony@tonygreeley.com",
+                        From: from,
+                        Subject: "Message From Portfolio Site",
+                        Body: body
+                      }).then(message => {if (message === 'OK') {
+                        response = '<div class="alert alert-success">Done! Thank you for your message - You will get an answer as soon as possible.';
+                    }
+                    else {
+                        response = '<div class="alert alert-danger">Ooops... It seems that we have a problem.';
+                    }
+                    $formAlert.html(response);
+                    $formAlert.show();
+                    });
                     return false;
                 }
                 return false;
