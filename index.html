@@ -664,7 +664,7 @@
                 <img src="assets/img/photos/IMG_0392.jpg" alt="Photo of myself" class="img-circle margin-b-30">
                 <h3>Please fill out the <strong>form</strong> - I will try to send a response as fast as I can!</h3>
                 <!-- Contact Form -->
-                <form id="contact-form" method="POST" action="assets/php/contact-form.php">
+                <form id="contact-form" method="POST">
                     <div class="form-alert"></div>
                     <div class="form-error alert alert-default">
                         <ul></ul>
@@ -681,7 +681,7 @@
                         <label>Message:</label>
                         <textarea id="message" class="form-control" name="message" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-secondary" name="send"><span>Send a message!</span><i class="ti-email"></i></button>
+                    <button type="submit" id="send" class="btn btn-secondary" name="send"><span>Send a message!</span><i class="ti-email"></i></button>
                 </form>
             </div>
         </div>
@@ -760,6 +760,8 @@
     })();
 </script>
 
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 
 </body>
 
