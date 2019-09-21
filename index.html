@@ -6,6 +6,15 @@
     <!-- Meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148149721-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148149721-2');
+    </script>
 
     <!-- Title -->
     <title>Tony Greeley</title>
@@ -27,17 +36,6 @@
     <!-- CSS Template -->
     <link rel="stylesheet" href="./assets/css/theme.min.css" />
     <link rel="stylesheet" href="./assets/css/color/orange-green.css" id="color">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138448324-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-138448324-1');
-    </script>
-
 
 </head>
 
@@ -100,7 +98,7 @@
                     stack, coding bootcamp!</h5>
                 <span data-target="local-scroll"><a href="#resume" class="btn btn-lg btn-primary animated"
                         data-animation="bounceIn"><span>Go to my resume!</span><i class="ti-arrow-down"></i></a></span>
-                <a href="./Anthony_Greeley_Dev_Resume.pdf" class="btn btn-link" download="Anthony_Greeley_Dev_Resume.pdf"><span>Download my Resume</span><i class="ti-file"></i></a>
+                <a href="/assets/resume/Anthony_Greeley_Dev_Resume.pdf" class="btn btn-link" download="Anthony_Greeley_Resume"><span>Download my Resume</span><i class="ti-file"></i></a>
             </div>
 
         </section>
@@ -616,6 +614,7 @@
                     <li><i class="inline-icon icon-before-and-after text-primary fa fa-comment"></i>tony@tonygreeley.dev</li>
                     <li><i class="inline-icon icon-before-and-after text-primary fa fa-phone"></i>(847) 848-0552</li>
                 </ul>
+                <a href="#" class="btn btn-primary" data-target="messenger"><span>Use Contact Form</span><i class="ti-email"></i></a>
                 <h5 class="margin-t-60">Check my social media!</h5>
                 <ul class="list-inline">
                     <li><a href="https://www.facebook.com/tonythetiger323" class="icon icon-circle icon-xs icon-facebook"><i
@@ -629,43 +628,71 @@
                     <li><a href="https://github.com/tonythetiger323/" class="icon icon-xs icon-circle icon-github" alt="Link to my GitHub page"><i
                                 class="fa fa-github-square"></i></a> </li>
                 </ul>
-
+                <h5>Like me on Facebook</h5>
+                <!-- FB Like -->
+                <div class="fb-like" data-href="https://www.facebook.com/tonythetiger323" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
             </div>
 
         </section>
         <!-- Section - Contact / End -->
     </div>
     <!-- Content / End -->
-
-    <!-- Mobile Navigation -->
-    <a href="#" id="mobile-nav-toggle" class="icon icon-circle icon-sm icon-primary icon-hover visible-xs visible-sm"
-        data-target="mobile-nav">
-        <i class="ti-menu"></i>
-    </a>
-    <nav id="mobile-nav" class="bg-white">
-        <div class="mobile-nav-wrapper">
-            <!-- Avatar -->
-            <img src="assets/img/photos/avatar-default.jpg" alt="..." class="img-circle margin-b-30">
-            <!-- Nav -->
-            <ul class="nav nav-vertical">
-                <li><a href="#start"><span>Start</span></a></li>
-                <li><a href="#resume"><span>Resume</span></a></li>
-                <li><a href="#portfolio"><span>Portfolio</span></a></li>
-                <li><a href="#contact"><span>Contact</span></a></li>
-            </ul>
-            <!-- Social Media -->
-            <div class="margin-t-20">
-                <strong class="text-sm">Check my social media!</strong>
-                <ul class="list-inline margin-t-10">
-                    <li><a href="https://www.facebook.com/tonythetiger323" class="icon icon-xs"><i class="fa fa-facebook text-muted"></i></a></li>
-                    <li><a href="https://twitter.com/tonythetiger323" class="icon icon-xs"><i class="fa fa-twitter text-muted"></i></a></li>
+    
+    <!-- Messanger -->
+    <a href="#" id="messenger-toggle" data-target="messenger" class="icon icon-sm icon-circle animated" data-animation="bounceIn" data-animation-delay="300"><i class="fa fa-comments"></i></a>
+    <div id="messenger" class="dark">
+    <div id="messenger-box">
+        <div class="messenger-box-content">
+            <!-- Close -->
+            <a href="#" class="messenger-close icon icon-hover icon-xs icon-circle icon-white" data-target="messenger"><i class="fa fa-times"></i></a>
+            <h3>Please fill the <strong>form</strong> - I will response as fast as I can!</h3>
+            <!-- Contact Form -->
+            <form id="contact-form">
+                <div class="form-alert"></div>
+                <div class="form-error alert alert-default"><ul></ul></div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input id="name" class="form-control" type="text" name="name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address:</label>
+                    <input id="email" class="form-control" type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea id="message" class="form-control" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary"><span>Send a message!</span><i class="ti-email"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+   
+<!-- Mobile Navigation -->
+<a href="#" id="mobile-nav-toggle" class="icon icon-circle icon-sm icon-primary icon-hover visible-xs visible-sm" data-target="mobile-nav">
+    <i class="ti-menu"></i>
+</a>
+<nav id="mobile-nav" class="bg-white">
+    <div class="mobile-nav-wrapper">
+         <!-- Nav -->
+        <ul class="nav nav-vertical">
+            <li><a href="#start"><span>Start</span></a></li>
+            <li><a href="#resume"><span>Resume</span></a></li>
+            <li><a href="#portfolio"><span>Portfolio</span></a></li>
+            <li><a href="#contact"><span>Contact</span></a></li>
+        </ul>
+        <!-- Social Media -->
+        <div class="margin-t-20">
+            <strong class="text-sm">Check my social media!</strong>
+            <ul class="list-inline margin-t-10">
+                <li><a href="https://www.facebook.com/tonythetiger323" class="icon icon-xs"><i class="fa fa-facebook text-muted"></i></a></li>
+                <li><a href="https://twitter.com/tonythetiger323" class="icon icon-xs"><i class="fa fa-twitter text-muted"></i></a></li>
                     <li><a href="https://www.instagram.com/tonythetiger323/" class="icon icon-xs"><i class="fa fa-instagram text-muted"></i>
-                        </a> </li>
-                    li><a href="https://www.linkedin.com/in/anthonygreeley/" class="icon icon-xs"><i class="fa fa-linkedin-square text-muted"
-                            alt="Link to my LinkedIn Page"></i></a></li>
+                    </a> </li>
+                    <li><a href="https://www.linkedin.com/in/anthonygreeley/" class="icon icon-xs"><i class="fa fa-linkedin-square text-muted"
+                    alt="Link to my LinkedIn Page"></i></a></li>
                     <li><a href="https://github.com/tonythetiger323/" class="icon icon-xs" alt="Link to my GitHub page"><i
-                                class="fa fa-github-square text-muted"></i></a> </li>
-
+                    class="fa fa-github-square text-muted"></i></a> </li>
                 </ul>
             </div>
         </div>
@@ -677,10 +704,17 @@
     <div id="ajax-modal"></div>
     <div id="ajax-loader"><i class="fa fa-spinner fa-spin"></i></div>
 
-    \
+    <div id="fb-root"></div>
+
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <!-- JS Libraries -->
     <script src="assets/js/jquery-1.11.3.min.js"></script>
-
     <!-- JS Plugins -->
     <script>
         window.paceOptions = {
@@ -693,21 +727,9 @@
     <!-- JS Core -->
     <script src="assets/js/core.min.js"></script>
 
-    <!-- Google Map API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWITC-60-2rd1RiAbmoZYzgEByVjzUYlM"></script>
-
-    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+    <!--Google Maps API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWITC-60-2rd1RiAbmoZYzgEByVjzUYlM">
+    </script>
+</body>
     
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-138448324-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-
 </html>

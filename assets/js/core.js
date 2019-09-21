@@ -210,14 +210,14 @@ var Mi = {
                 });
             }
             
-            function loadContent() {　
+            function loadContent() {
                $ajaxModal.load(toLoad);
-        　  }
+            }
             
             $('[data-target="ajax-modal"]').on('click', function() {
                 isAjaxModal = true;
                 offsetTop = $(document).scrollTop();
-                toLoad = $(this).attr('href');　
+                toLoad = $(this).attr('href');
                 loadContent();
                 $('body').addClass('ajax-modal-opened');
                 return false; 
