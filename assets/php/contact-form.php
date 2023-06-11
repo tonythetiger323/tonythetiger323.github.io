@@ -4,7 +4,7 @@
 	$email = trim($_POST['email']);
 	$message = trim($_POST['message']);
 	
-	$emailTo = 'tony@tonygreeley.dev'; //Put your own email address here
+	$emailTo = 'tony.greeley@me.com'; //Put your own email address here
 	if (empty($subject)) {
 	    $subject = 'Message from your website.';
 	}
